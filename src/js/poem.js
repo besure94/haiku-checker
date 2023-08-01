@@ -22,7 +22,7 @@ export class Poem {
     this.haiku = this.haikuArray.join(' ');
   }
 
-  // removePunctuation() {
-  //   return punctuationString.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "");
-  // }
+  removePunctuation(punctuationString) {
+    return punctuationString.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "");
+  }
 }
