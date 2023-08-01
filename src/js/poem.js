@@ -5,9 +5,9 @@ export class Poem {
     this.lineThree = [];
   }
 
-  fillLine() {
-    this.lineOne = "giraffes";
-    this.lineTwo = "are";
-    this.lineThree = "rad";
+  fillLine(lineOne, lineTwo, lineThree) {
+    this.lineOne = lineOne;
+    this.lineTwo = lineTwo;
+    this.lineThree = lineThree;
   }
 }
