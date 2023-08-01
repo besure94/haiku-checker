@@ -3,11 +3,26 @@ export class Poem {
     this.lineOne = [];
     this.lineTwo = [];
     this.lineThree = [];
+    this.haikuArray = [];
+    this.haiku = "";
   }
 
-  fillLine(lineOne, lineTwo, lineThree) {
-    this.lineOne = lineOne;
-    this.lineTwo = lineTwo;
-    this.lineThree = lineThree;
+  // arguments should be strings
+  fillLine(lineOneStr, lineTwoStr, lineThreeStr) {
+    this.lineOne.push(lineOneStr);
+    this.lineTwo.push(lineTwoStr);
+    this.lineThree.push(lineThreeStr);
   }
+
+  combineArrays() {
+    this.haikuArray.push(...this.lineOne, ...this.lineTwo, ...this.lineThree);
+  }
+
+  combineStrings() {
+    this.haiku = this.haikuArray.join(' ');
+  }
+
+  // removePunctuation() {
+  //   return punctuationString.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "");
+  // }
 }
