@@ -18,18 +18,32 @@ describe('Poem', () => {
     reusablePoem = new Poem()
   });
 
-  test('should create a poem object containing three arrays', () => {
+  test('should create a poem object with three properties, with each one containing an array', () => {
     expect(reusablePoem.lineOne).toEqual([]);
     expect(reusablePoem.lineTwo).toEqual([]);
     expect(reusablePoem.lineThree).toEqual([]);
   });
-  test('should fill each array of the poem object with an inputted value', () => {
+  test('should fill each array of the poem object with an inputted string', () => {
+    // alternative expect statement could be expect(reusablePoem.lineOne).toEqual(["giraffes"]);
     reusablePoem.fillLine("giraffes", "are", "rad");
-    expect(reusablePoem.lineOne).toEqual("giraffes");
-    expect(reusablePoem.lineTwo).toEqual("are");
-    expect(reusablePoem.lineThree).toEqual("rad");
+    expect(reusablePoem.lineOne[0]).toEqual("giraffes");
+    expect(reusablePoem.lineTwo[0]).toEqual("are");
+    expect(reusablePoem.lineThree[0]).toEqual("rad");
   });
-  test('should verify that each array contains only letters', () => {
-    reusablePoem.verifyLetters()
+  test('should combine each array from the poem object into a single array', () => {
+    reusablePoem.fillLine("giraffes", "are", "rad");
+    reusablePoem.combineArrays();
+    expect(reusablePoem.haikuArray).toEqual(["giraffes", "are", "rad"]);
   });
+  test('should combine haikuArray from the poem object into a single string', () => {
+    reusablePoem.fillLine("giraffes", "are", "rad");
+    reusablePoem.combineArrays()
+    reusablePoem.combineStrings();
+    expect(reusablePoem.haiku).toEqual("giraffes are rad");
+  });
+  // test('should remove punctuation from each string in each array', () => {
+  //   reusablePoem.fillLine("giraffes", "are", "rad");
+  //   const result = reusablePoem.verifyLetters();
+  //   expect(result).toEqual(true);
+  // });
 });
