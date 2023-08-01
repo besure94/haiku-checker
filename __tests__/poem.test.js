@@ -41,9 +41,8 @@ describe('Poem', () => {
     reusablePoem.combineStrings();
     expect(reusablePoem.haiku).toEqual("giraffes are rad");
   });
-  // test('should remove punctuation from each string in each array', () => {
-  //   reusablePoem.fillLine("giraffes", "are", "rad");
-  //   const result = reusablePoem.verifyLetters();
-  //   expect(result).toEqual(true);
-  // });
+  test('should remove punctuation from a string', () => {
+    const result = reusablePoem.removePunctuation("giraffes are rad!");
+    expect(result).toEqual("giraffes are rad");
+  });
 });
