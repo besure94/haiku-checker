@@ -23,4 +23,13 @@ describe('Poem', () => {
     expect(reusablePoem.lineTwo).toEqual([]);
     expect(reusablePoem.lineThree).toEqual([]);
   });
+  test('should fill each array of the poem object with an inputted value', () => {
+    reusablePoem.fillLine("giraffes", "are", "rad");
+    expect(reusablePoem.lineOne).toEqual("giraffes");
+    expect(reusablePoem.lineTwo).toEqual("are");
+    expect(reusablePoem.lineThree).toEqual("rad");
+  });
+  test('should verify that each array contains only letters', () => {
+    reusablePoem.verifyLetters()
+  });
 });
