@@ -9,9 +9,9 @@ export class Poem {
 
   // arguments should be strings
   fillLine(lineOneStr, lineTwoStr, lineThreeStr) {
-    this.lineOne.push(lineOneStr);
-    this.lineTwo.push(lineTwoStr);
-    this.lineThree.push(lineThreeStr);
+    this.lineOne.push(this.removePunctuation(lineOneStr));
+    this.lineTwo.push(this.removePunctuation(lineTwoStr));
+    this.lineThree.push(this.removePunctuation(lineThreeStr));
   }
 
   combineArrays() {
