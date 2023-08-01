@@ -19,7 +19,7 @@ module.exports = {
 			verbose: true
 		}),
     new HtmlWebpackPlugin({
-      title: 'Weekday Calculator',
+      title: 'Haiku Checker',
       template: './src/index.html',
       inject: 'body'
     })
