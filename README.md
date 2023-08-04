@@ -34,6 +34,17 @@
 
 ## License
 
+1. Will take in three sentences as arrays from the user.
+2. Will need a Poem object:
+  * Will need three properties each storing an array.
+  * Each property will represent one line of text.
+  * Each line will be evaluated for its number of syllables.
+3. Will need a method that will add the three lines together.
+4. Will need a method that will evaluate each word for at least one vowel.
+5. Will need a method that splits a word into two syllables if it contains two of the same consonant.
+6. Will need a method that evaluates for a long or short vowel sound:
+
+
 Objectives:
 
 A haiku is a poem that consists of three lines. The first has five syllables, the second has seven, and the third has five. Start by creating an application that checks whether a poem is in fact a haiku. If you have time, build out your application so that it can randomly generate haikus.
